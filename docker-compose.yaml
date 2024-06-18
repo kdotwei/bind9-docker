@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  debian-bind9:
+    build: ./
+    container_name: debian-bind9
+    networks:
+      - intranet
+    ports:
+      - "50953:953/tcp"
+      - "50053:53/tcp"
+      - "50053:53/udp"
+
+networks:
+  intranet:
+    driver: bridge
