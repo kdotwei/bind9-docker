@@ -1,15 +1,19 @@
 $TTL    60
 @       IN      SOA     ns.kwei.nycu.me. admin.kwei.nycu.me. (
-                                2024061701 ; Serial
+                                2024061702 ; Serial
                                 300        ; Refresh
                                 1800       ; Retry
                                 3600       ; Expire
                                 60)        ; Negative Cache TTL
 ;
-@                   IN      NS      ns.kwei.nycu.me.
 @                   IN      A       103.69.93.3
 ns                  IN      A       103.69.93.5
 www                 IN      A       103.69.93.3
+mail                IN      A       103.69.93.4
+
+@	                IN	    MX  10  mail.kwei.nycu.me.
+@                   IN      NS      ns.kwei.nycu.me.
+@                   IN      TXT     "v=spf1 ip4=103.69.93.4 -all"
 
 ; DNSKEY records
 kwei.nycu.me. IN DNSKEY 257 3 8 AwEAAeI6Cauikn6eiuXZA4KuvBQ/E1MmPPbqLXmIwBK9oaTfc2IrjG// 5QiQ3l3VE1+nHBGSkqQMsv+tFMLxc+pZgI0EvGPV3rsqCrX0eR3zpaV7 ADnBI9FaQ2L4TfkcFbG8maF8vhRPDWl8xc6IbqfiNbM1WCUOSZbBunZu Ha2egLu5rz0YvQwhwjMGajVr1p6ZYRwgfG4d6uIm0Fu80185N4BFegH0 ehApG25rAyfJj8Io6UXaAIKeAo6mGH5BR2PYZ8+ZPjb6OHDa0mn4Tv30 R6JGpWIOUt53KSJ+diH0K+SjhX7+iV+/XBTzqx+FSnbxw5jRb1CInQqy f5aeexSmQn0=
