@@ -8,7 +8,8 @@
 
 zone "kwei.nycu.me" in {
 	type master;
-	file "/etc/bind/db.kwei.nycu.me";
+	file "/etc/bind/db.kwei.nycu.me.signed";
+    key-directory "/var/cache/bind/";
 	allow-query { any; };
     allow-update { none; };
 };

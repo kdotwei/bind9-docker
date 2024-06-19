@@ -8,8 +8,10 @@ services:
       - intranet
     ports:
       - "953:953/tcp"
-      - "53:53/tcp"
-      - "53:53/udp"
+      - "50053:53/tcp"
+      - "50053:53/udp"
+    volumes:
+      - ./dnskeys:/dnskeys
 
 networks:
   intranet:
