@@ -12,4 +12,5 @@ zone "kwei.nycu.me" in {
     key-directory "/var/cache/bind/";
 	allow-query { any; };
     allow-update { none; };
+    allow-transfer { 127.0.0.1; };
 };
